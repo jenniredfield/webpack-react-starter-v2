@@ -1,10 +1,8 @@
 import {logger} from './helpers';
 
-function sum(a,b){
-    return a + c;
-}
 
 logger();
 console.log('Bundle');
 console.log('new logger');
-console.log(sum(4,3))
+console.log(process.env.NODE_ENV);
+console.log(SOME_GLOBAL)

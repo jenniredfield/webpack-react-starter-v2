@@ -11,3 +11,9 @@ npm install --save-dev babel-loader
 - Install plugins
 npm install --save-dev html-webpack-plugin
 npm install --save-dev clean-webpack-plugin
+
+- Install webpack-merge
+npm install --save-dev webpack-merge
+
+- Install dotenv webpack package
+npm install dotenv-webpack --save-dev
