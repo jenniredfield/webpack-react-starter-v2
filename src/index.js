@@ -1,8 +1,8 @@
-import {logger} from './helpers';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './components/App';
 
-
-logger();
-console.log('Bundle');
-console.log('new logger');
-console.log(process.env.NODE_ENV);
-console.log(SOME_GLOBAL)
+ReactDOM.render(
+  <App/>,
+  document.getElementById('app')
+);
