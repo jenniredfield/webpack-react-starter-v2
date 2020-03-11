@@ -1,6 +1,8 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -11,25 +13,6 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
-      {
-        test: /\.css$/i,
-        exclude: /node_modules/,
-        use: [
-          'style-loader',
-          {
-            loader: 'css-loader',
-            options: {
-              modules: true,
-            },
-          },
-        ],
-      },
-      {
-        test: /\.(jpe?g|png)$/,
-        use: {
-          loader: 'url-loader',
-        },
-      }
     ],
   },
   resolve: {
@@ -38,15 +21,12 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: path.resolve(__dirname, '../', './src/index.html'),
+    }),
+    new CopyPlugin([{ from: './public', to: './public' }]),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css',
+      chunkFilename: '[id].[hash].css'
     }),
   ],
-  output: {
-    path: path.resolve(__dirname, '../', 'dist'),
-    publicPath: '/',
-    filename: 'bundle.js',
-  },
-  devServer: {
-    contentBase: './dist',
-  },
 };

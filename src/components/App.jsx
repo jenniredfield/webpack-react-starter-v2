@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../assets/images/webpack-logo.png';
+import logo from '../../public/assets/images/webpack-logo.png';
 import '../styles/styles.css';
 
 const App = () => {
