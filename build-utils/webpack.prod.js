@@ -22,9 +22,15 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|ttf)$/,
-        use: {
-          loader: 'url-loader',
-        },
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 1000,
+              name: "assets/[hash].[ext]"
+            },
+          },
+        ],
       },
     ],
   },

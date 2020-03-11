@@ -21,9 +21,14 @@ module.exports = {
       },
       {
         test: /\.(jpe?g|png|ttf)$/,
-        use: {
-          loader: 'url-loader',
-        },
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: false,
+            },
+          },
+        ],
       },
     ],
   },
@@ -37,6 +42,6 @@ module.exports = {
   ],
   devServer: {
     contentBase: './dist',
-    publicPath: '/'
+    publicPath: '/',
   },
 };
