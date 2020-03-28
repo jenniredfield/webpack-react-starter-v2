@@ -1,3 +1,14 @@
+# Webpack React Starter pack
+
+- Webpack project ready to start a React application. It contains:
+- Eslint configured with prettier;
+- Environment variables loaded with dotenv-webpack;
+- React loader, html and css loader;
+- Image and fonts loaders;
+- Development and production builds.
+
+## Instructions
+
 - Install webpack
   npm install --save-dev webpack webpack-dev-server webpack-cli
 
