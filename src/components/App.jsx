@@ -1,12 +1,11 @@
 import React from 'react';
 import logo from '../../public/assets/images/webpack-logo.png';
-import '../styles/styles.css';
 
 const App = () => {
   return (
-    <div>
+    <div className="App__container">
       <img src={logo}/>
-      <h1>Webpack React Sass</h1>
+      <h1 className="App__title">Webpack React Starter</h1>
     </div>
   );
 };
