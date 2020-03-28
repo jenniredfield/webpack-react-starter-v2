@@ -28,9 +28,6 @@ module.exports = {
     ],
   },
   plugins: [
-    new DefinePlugin({
-      SOME_GLOBAL: JSON.stringify('yes'),
-    }),
     new Dotenv({
       path: './.env.development',
     }),
