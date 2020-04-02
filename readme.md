@@ -7,6 +7,10 @@
 - Image and fonts loaders;
 - Development and production builds.
 
+## To use environment variables
+
+- Create .env.development and .env.production on top level folder and populate accordingly
+
 ## Instructions
 
 - Install webpack
